@@ -17,7 +17,7 @@ with open("data.csv", "w", encoding="utf-8") as file:
     w.writerow(title)
     
     for final in list:
-        if final["xpostDate"][3] == "5" or final["xpostDate"][3] == "6":
+        if int(final["xpostDate"][0:4]) >= 2015 :
             total_list = []
             total_list.append(final["stitle"])
             total_list.append(final["address"][5]+final["address"][6]+final["address"][7])
